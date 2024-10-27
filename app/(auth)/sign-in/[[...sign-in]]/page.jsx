@@ -32,10 +32,10 @@ export default function Page() {
           Welcome to Intervue
         </h2>
 
-        <p className="mt-4 leading-relaxed text-gray-500">
+        <p className="mt-4 leading-relaxed text-white">
   Join our platform today and unlock your potential! Our comprehensive resources and tailored mock interviews are designed to help you succeed in your interview preparation. With a simple registration process, you can access expert feedback and valuable materials to enhance your skills.
 </p>
-<p className="mt-4 leading-relaxed text-gray-500">
+<p className="mt-4 leading-relaxed text-white">
   Don’t miss this opportunity to take your interview performance to the next level. Sign up now and start your journey toward success!
 </p>
 
@@ -69,10 +69,10 @@ export default function Page() {
             Welcome to Intervue
           </h1>
 
-          <p className="mt-4 leading-relaxed text-gray-500">
+          <p className="mt-4 leading-relaxed text-white">
   Join our platform today and unlock your potential! Our comprehensive resources and tailored mock interviews are designed to help you succeed in your interview preparation. With a simple registration process, you can access expert feedback and valuable materials to enhance your skills.
 </p>
-<p className="mt-4 leading-relaxed text-gray-500">
+<p className="mt-4 leading-relaxed text-white">
   Don’t miss this opportunity to take your interview performance to the next level. Sign up now and start your journey toward success!
 </p>
 
