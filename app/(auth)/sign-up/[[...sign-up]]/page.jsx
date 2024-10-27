@@ -30,10 +30,13 @@ export default function Page() {
             Welcome to Intervue
           </h2>
   
-          <p className="mt-4 leading-relaxed text-white/90">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam dolorum aliquam,
-            quibusdam aperiam voluptatum.
-          </p>
+          <p className="mt-4 leading-relaxed text-gray-500">
+  Join our platform today and unlock your potential! Our comprehensive resources and tailored mock interviews are designed to help you succeed in your interview preparation. With a simple registration process, you can access expert feedback and valuable materials to enhance your skills.
+</p>
+<p className="mt-4 leading-relaxed text-gray-500">
+  Don’t miss this opportunity to take your interview performance to the next level. Sign up now and start your journey toward success!
+</p>
+
         </div>
       </section>
   
@@ -61,13 +64,16 @@ export default function Page() {
             </a>
   
             <h1 className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
-              Welcome to Squid 🦑
+              Welcome to Intervue
             </h1>
   
             <p className="mt-4 leading-relaxed text-gray-500">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam dolorum aliquam,
-              quibusdam aperiam voluptatum.
-            </p>
+  Join our platform today and unlock your potential! Our comprehensive resources and tailored mock interviews are designed to help you succeed in your interview preparation. With a simple registration process, you can access expert feedback and valuable materials to enhance your skills.
+</p>
+<p className="mt-4 leading-relaxed text-gray-500">
+  Don’t miss this opportunity to take your interview performance to the next level. Sign up now and start your journey toward success!
+</p>
+
           </div>
   
           <SignUp afterSignUpUrl="/dashboard"/>
