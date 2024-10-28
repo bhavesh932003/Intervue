@@ -1,10 +1,43 @@
 "use client";
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Header from './dashboard/_components/Header';
+
+const typingEffect = (text, speed) => {
+    return new Promise(resolve => {
+        let i = 0;
+        const typingInterval = setInterval(() => {
+            if (i < text.length) {
+                resolve(text.slice(0, i + 1));
+                i++;
+            } else {
+                clearInterval(typingInterval);
+            }
+        }, speed);
+    });
+};
 
 export default function LandingPage() {
     const [isLoading, setIsLoading] = useState(false);
+    const [typedText, setTypedText] = useState('');
+
+    const title = "Your Personal AI Interview Coach";
+
+    useEffect(() => {
+        const typeTitle = async () => {
+            while (true) {
+                for (let i = 0; i <= title.length; i++) {
+                    setTypedText(title.slice(0, i));
+                    await typingEffect(title, 100);
+                }
+                for (let i = title.length; i >= 0; i--) {
+                    setTypedText(title.slice(0, i));
+                    await typingEffect(title, 100);
+                }
+            }
+        };
+        typeTitle();
+    }, []);
 
     const handleButtonClick = async () => {
         setIsLoading(true);
@@ -23,7 +56,7 @@ export default function LandingPage() {
                 {/* Hero Section */}
                 <section className="py-8 bg-transparent z-50 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
                     <h1 className="mb-4 text-4xl font-bold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">
-                        Your Personal AI Interview Coach
+                        {typedText}
                     </h1>
                     <p className="text-gray-400 mb-8 text-xl font-semibold">
                         Double your chances of landing that job offer with our AI-powered interview prep
@@ -109,3 +142,4 @@ export default function LandingPage() {
         </div>
     );
 }
+
