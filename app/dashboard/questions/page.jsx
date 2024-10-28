@@ -8,8 +8,8 @@ import { ChevronsUpDown } from "lucide-react";
 const questionsData = [
   {
     id: 1,
-    question: "What is the purpose of this product?",
-    answer: "This product helps users improve their interviewing skills through mock interviews and constructive feedback. It is designed to build confidence and prepare candidates for real-life interview scenarios.",
+    question: "What is the purpose of Intervue?",
+    answer: "Intervue helps users improve their interviewing skills through mock interviews and constructive feedback. It is designed to build confidence and prepare candidates for real-life interview scenarios.",
   },
   {
     id: 2,
@@ -38,13 +38,13 @@ const questionsData = [
   },
   {
     id: 7,
-    question: "Does your product provide feedback on mock interviews?",
-    answer: "No, our product does not provide direct feedback on mock interviews. Instead, it offers resources and tools for self-assessment and improvement based on user performance.",
+    question: "Does Intervue provide feedback on mock interviews?",
+    answer: "No, Intervue does not provide direct feedback on mock interviews. Instead, it offers resources and tools for self-assessment and improvement based on user performance.",
   },
   {
     id: 8,
     question: "Can I schedule interviews at any time?",
-    answer: "Yes, you can schedule mock interviews at your convenience. Our platform allows you to choose time slots that work best for you, accommodating your busy schedule.",
+    answer: "Yes, you can schedule mock interviews at your convenience. Intervue allows you to choose time slots that work best for you, accommodating your busy schedule.",
   },
   {
     id: 9,
@@ -66,22 +66,39 @@ export default function Questions() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-4">Frequently Asked Questions</h1>
-      <div className="space-y-4">
-        {questionsData.map((item, index) => (
-          <Collapsible key={item.id} open={openIndex === index} onOpenChange={() => toggleAnswer(index)} className='mt-2'>
-            <CollapsibleTrigger className='p-2 bg-secondary rounded-lg flex justify-between items-center w-full cursor-pointer transition-colors duration-300 hover:bg-gray-100'>
-              <span className='text-lg font-semibold'>{item.question}</span>
-              <ChevronsUpDown className='h-5 w-5 transition-transform duration-300' style={{ transform: openIndex === index ? 'rotate(180deg)' : 'rotate(0deg)' }} />
-            </CollapsibleTrigger>
-            <CollapsibleContent>
-              <div className='p-4 border rounded-lg bg-blue-50 text-sm text-blue-900 mt-2 transition-opacity duration-300 ease-in-out'>
-                {item.answer}
-              </div>
-            </CollapsibleContent>
-          </Collapsible>
-        ))}
+    <div className="flex flex-col items-center justify-center min-h-screen w-full">
+      <div className="max-w-3xl mx-auto p-6">
+        <h1 className="text-4xl font-bold text-center mb-6">Frequently Asked Questions</h1>
+        
+        {/* Vertical Scrollable Container */}
+        <div className="space-y-4 max-h-[600px] overflow-y-auto p-4 scrollbar-hide">
+          {questionsData.map((item, index) => (
+            <div
+              key={item.id}
+              className="w-full bg-white rounded-lg border border-gray-300 p-4 shadow-sm transition-transform duration-300 hover:scale-105 cursor-pointer"
+              onClick={() => toggleAnswer(index)}
+            >
+              <Collapsible open={openIndex === index} onOpenChange={() => toggleAnswer(index)}>
+                <CollapsibleTrigger className="flex items-center justify-between">
+                  <span className="text-lg font-semibold text-gray-800 flex-grow">
+                    {item.question}
+                  </span>
+                  <ChevronsUpDown
+                    className="h-5 w-5 text-gray-600 transition-transform duration-300"
+                    style={{ transform: openIndex === index ? 'rotate(180deg)' : 'rotate(0deg)' }}
+                  />
+                </CollapsibleTrigger>
+                {openIndex === index && (
+                  <CollapsibleContent className="mt-2 transition-opacity duration-300 ease-in-out opacity-100">
+                    <div className="p-4 text-gray-700 text-sm border-l-4 border-blue-500 bg-blue-50 rounded-lg">
+                      {item.answer}
+                    </div>
+                  </CollapsibleContent>
+                )}
+              </Collapsible>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
