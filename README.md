@@ -1,4 +1,4 @@
-## About Intervue
+# About Intervue
 
 **Intervue** is a comprehensive platform designed to enhance interview preparation through a variety of innovative features. Users can engage in mock interviews tailored to their specific needs, allowing them to practice different interview styles, including behavioral and technical formats. The platform provides valuable feedback after each session, enabling users to identify their strengths and areas for improvement. 
 
