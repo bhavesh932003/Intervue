@@ -1,128 +1,63 @@
-# About Intervue
+# About Mailer.AI
 
-**Intervue** is a comprehensive platform designed to enhance interview preparation through a variety of innovative features. Users can engage in mock interviews tailored to their specific needs, allowing them to practice different interview styles, including behavioral and technical formats. The platform provides valuable feedback after each session, enabling users to identify their strengths and areas for improvement. 
+**Mailer.AI** is an intelligent platform designed to streamline and automate the email marketing process. By leveraging advanced algorithms and AI capabilities, it allows users to create personalized email campaigns efficiently, improving engagement rates and conversion metrics. The platform offers various tools for tracking campaign performance, providing valuable insights to enhance future outreach strategies.
 
-With flexible scheduling options, candidates can set up interviews at their convenience, ensuring that practice fits seamlessly into their busy lives. Intervue also offers various subscription plans, including a free option, making it accessible for everyone. In addition, users can access resources and tools for self-assessment, further supporting their journey toward mastering interview skills. 
+With user-friendly features, Mailer.AI ensures that even those with minimal technical expertise can design and launch effective email marketing campaigns. Additionally, the platform includes robust analytics to measure success and optimize strategies, enabling businesses to connect with their audience more effectively.
 
-Overall, Intervue is designed to empower candidates and boost their confidence as they prepare for real-world interviews.
+Overall, Mailer.AI is committed to empowering businesses with the tools needed to succeed in their email marketing efforts.
 
-For more detailed information about Intervue's features, you can visit their [official website](https://intervue-nine.vercel.app/).
+For more detailed information about Mailer.AI's features, you can visit their [official website](https://mailer.ai).
 
 # 📁 File Structure
 ```
-📦 Intervue
+📦 Mailer.AI
 ├── .gitignore
-├── components.json
-├── drizzle.config.js
-├── jsconfig.json
-├── middleware.js
-├── next.config.mjs
-├── package-lock.json
-├── package.json
-├── postcss.config.mjs
-├── README.md
-├── tailwind.config.js
 ├── app/
-│   ├── favicon.ico
-│   ├── globals.css
-│   ├── layout.js
-│   ├── page.js
-│   ├── (auth)/
-│   │   ├── sign-in/
-│   │   │   └── [[...sign-in]]/
-│   │   │       └── page.jsx
-│   │   └── sign-up/
-│   │       └── [[...sign-up]]/
-│   │           └── page.jsx
-│   ├── dashboard/
-│   │   ├── layout.jsx
-│   │   ├── page.jsx
-│   │   ├── how/
-│   │   │   └── page.jsx
-│   │   ├── interview/
-│   │   │   └── [interviewId]/
-│   │   │       ├── page.jsx
-│   │   │       ├── feedback/
-│   │   │       │   └── page.jsx
-│   │   │       └── start/
-│   │   │           ├── page.jsx
-│   │   │           └── _components/
-│   │   │               ├── QuestionsSection.jsx
-│   │   │               └── RecordAnsSection.jsx
-│   │   ├── questions/
-│   │   │   └── page.jsx
-│   │   ├── upgrade/
-│   │   │   └── page.jsx
-│   │   └── _components/
-│   │       ├── AddNewInterview.jsx
-│   │       ├── Header.jsx
-│   │       ├── InterviewItemCard.jsx
-│   │       └── InterviewList.jsx
-│   └── fonts/
-│       ├── GeistMonoVF.woff
-│       └── GeistVF.woff
-├── components/
-│   └── ui/
-│       ├── button.jsx
-│       ├── collapsible.jsx
-│       ├── dialog.jsx
-│       ├── input.jsx
-│       ├── sonner.jsx
-│       └── textarea.jsx
-├── lib/
-│   └── utils.js
-├── public/
-│   ├── bg-image.jsx
-│   ├── icon1.svg
-│   ├── icon2.svg
-│   ├── icon3.svg
-│   ├── logo.svg
-│   ├── webc.png
-│   └── assets/
-│       └── back.jpg
-└── utils/
-    ├── db.js
-    ├── GeminiAIModel.js
-    ├── planData.jsx
-    └── schema.js
+│   ├── app-resource-my_portfolio.csv
+│   ├── env
+│   ├── chains.py
+│   ├── main.py
+│   ├── portfolio.py
+│   ├── utils.py
+│   ├── vectorstore-chromasqlite3/
+│   └── venv/
+│       ├── chroma_db.ipynb
+│       ├── groq.ipynb
+│       ├── mailer.ipynb
+│       └── requirements.ext
+├── README.md
+└── requirements.txt
 ```
-
 
 # 📦 Installation
 - **Clone the Repository**: Clone the repository to your local machine using the following command:
   ```bash
-   git clone https://github.com/your-username/intervue.git
+   git clone https://github.com/your-username/mailer.ai.git
   ```
 - **Navigate into the project directory**: To navigate into the project directory, use the command:
-
   ```bash
-   cd intervue
+   cd mailer.ai
   ```
 - **Install the required dependencies**: Install all necessary libraries and packages required to run the project.
   ```bash
-   npm install
+   pip install -r requirements.ext
   ```
 - **Start the development server**: Finally, run the application to start the service.
   ```bash
-   npm run dev
+   streamlit run .\app\main.py
   ```
 # 🛠 Tech Stack
 
-- **Frontend:** 
-  -  🌐 [Next.js](https://nextjs.org/) - A React framework for server-rendered applications.
-  - 🌊  [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for styling.
-  - ⚛️ [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+- **Frontend:**
+  - 🌐 [Flask](https://flask.palletsprojects.com/) - A micro web framework for Python.
 
 - **Backend:**
-  - 🌲Node.js - JavaScript runtime for server-side development.
-  - ⚙️ Express.js - A minimal and flexible Node.js web application framework.
-
-- **Database:**
-  - 🔮 NeonDB - A PostgreSQL database for storing user data and application state.
+  - 🔗 Python - The primary programming language used for server-side logic.
+  - 🌲 SQLite - A lightweight database for storing application data.
 
 - **Other Technologies:**
-  - 🚀 [Vercel](https://vercel.com/) - For deploying the Next.js application.
-  -  🌧️ [Drizzle ORM](https://orm.drizzle.team/) - For interacting with the database.
+  - 🚀 [Jupyter Notebooks](https://jupyter.org/) - For data analysis and exploration.
+  - 🌟 AI Libraries - Various libraries for machine learning and data processing.
 
 # ✨ Contributors
 
@@ -131,14 +66,14 @@ For more detailed information about Intervue's features, you can visit their [of
 
 # 🌐 Website
 
-You can check out the live version of the application at [Intervue](https://intervue-nine.vercel.app/).
+You can check out the live version of the application at [Mailer.AI](https://intervue-nine.vercel.app/).
 
 # 📚 Learn More
 
 To learn more about the technologies used in this project, check out the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [MongoDB Documentation](https://docs.mongodb.com/)
+- [Flask Documentation](https://flask.palletsprojects.com/)
+- [SQLite Documentation](https://www.sqlite.org/docs.html)
+- [Python Documentation](https://docs.python.org/3/)
 
 For further assistance or questions, feel free to reach out to the contributors.
